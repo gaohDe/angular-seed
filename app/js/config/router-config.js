@@ -13,7 +13,8 @@ app.config(['$stateProvider', '$urlRouterProvider', 'RouterHelperProvider', func
         .state('app.ggg', {
             url: '/ggg',
             title: 'ggg',
-            templateUrl: helper.basePath('partials/ggg.html')
+            templateUrl: helper.basePath('partials/ggg.html'),
+            resolve:helper.resolveFor('app')
         })
         .state('login', {
             url: '/login',
